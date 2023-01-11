@@ -3,12 +3,28 @@
 {
      
 }
-// api call in javascript ?
+// api call in javascript?
+
+
+
 const userAction = async () => {
-  const response = await fetch('https://dev.to/api/articles?username=tmayank860');
+  const response = await fetch('https://dev.to/api/articles?username=tmayank860', {
+    method: 'GET',
+  });
   const myJson = await response.json(); //extract JSON from the http response
-  return myJson;
+  // do something with myJson
+  console.log("fhhgfh",myJson);
+  return myJson
 }
+
+
+
+// const userAction = async () => {
+//   const response = await fetch('https://dev.to/api/articles?username=tmayank860');
+//   const myJson = await response.json(); //extract JSON from the http response
+//   console.log(myJson);
+//   return myJson;
+// }
 var ld=document.getElementById("ld");
 var loader=document.createElement("div");
 loader.className="loader";
@@ -16,7 +32,7 @@ loader.className="loader";
      var blg=document.getElementById("bl");
 const getBlogs=async()=>{
 const blogs= await userAction();
-console.log(blogs);
+// console.log(blogs);
 blogs.map(blog=>{
      var div=document.createElement("div");
      div.className="blog";
