@@ -48,7 +48,7 @@ blogs.map(blog=>{
      button=document.createElement("button");
      button.className="btn btn-1";
      button.innerHTML="Read More"
-     img.setAttribute("src",blog.cover_image);
+     img.setAttribute("src",blog.cover_image ? blog?.cover_image : blog?.social_image);
      img.setAttribute("alt",blog.title);
      img.setAttribute("class","blog-cover");
      heading.innerHTML=blog.title;
